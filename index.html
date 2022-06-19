@@ -7,12 +7,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maps JavaScript API</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
   <link rel="stylesheet" href="./style.css">
+  
 </head>
 
 <body>
-  <div id="map"> </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap"
+
+    <div id="map"></div>
+    <div class="menu">
+      <h1>Geojson Reader</h1>
+      <p>
+        Esta es una web app que permite leer un Geojson y mostrarlo en un mapa.
+      </p>
+      <div>
+        <select class="geojsonSelector">
+          <option value="">Selecciona una opción</option>
+          <option selected value="comarques-compressed.geojson">comarques-compressed.geojson</option>
+          <option value="comarques-barcelona.geojson">comarques-barcelona.geojson</option>
+          <option value="comarques-girona.geojson">comarques-girona.geojson</option>
+          <option value="comarques-tarragona.geojson">comarques-tarragona.geojson</option>
+          <option value="seccions-censals-lleida.geojson">seccions-censals-lleida.geojson</option>
+        </select>
+        <button class="dibujar">Dibujar</button>
+      </div>
+  </div>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k"
     async defer></script>
   <script src="script.js"></script>
 </body>

@@ -11,13 +11,31 @@ td, th {
   padding: 8px;
 }
 
+/* Medidas del mapa */
 #map {
-  height: 100%;
+  min-height: 100%;
+  min-width: 50%;
+  width: 50%;
 }
 
+/* Menu */
+.menu {
+  width: 50%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+/* Css General */
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

@@ -1,10 +1,11 @@
 // Iniciamos variables globales.
 let map;
 let multiplePoints = [];
+let geojson = "./data/comarques-compressed.geojson"
 
 // Funcion fetch que recoge los datos del geojson
 async function cargarDatos() {
-    let data = await fetch("./data/comarques-compressed.geojson");
+    let data = await fetch(geojson);
     let resp = await data.json();
     console.log(resp);
     return resp;
@@ -78,5 +79,12 @@ async function iniciar() {
     printMapData(datos);
     initMap();
 }
+
+document.querySelector(".dibujar").addEventListener("click", function(){
+    let selected = document.querySelector(".geojsonSelector").value;
+    geojson = `./data/${selected}`;
+    multiplePoints = [];
+    iniciar();
+});
 
 iniciar();
